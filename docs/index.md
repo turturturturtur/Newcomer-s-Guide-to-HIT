@@ -1,207 +1,46 @@
-# 主页
+# 写在前面
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+本书目前包括了以下部分(如果你有其他好的建议，或者想加入贡献者的行列，欢迎邮件 2023110605@stu.hit.edu.cn 或者在 issue 里提问)：
 
-## Code Annotation Examples
 
-### Codeblocks
+* <font color="red">**[占位符]** </font>
+* <font color="red">**[占位符]** </font>
+* <font color="red">**[占位符]** </font>
+* <font color="red">**[占位符]** </font>
 
-```c title="hello" linenums="1"
-#include <stdio.h>
-#include <malloc.h>
 
-typedef struct List List;
-typedef struct StackTop StackTop;
-typedef struct ListNode ListNode;
-// 所有节点序号从0开始，和数组一样
-struct ListNode
-{
-    int value;             // 储存链表每个节点的值
-    struct ListNode *next; // 一个和链表节点一样结构的结构指针，用来指向下一个节点
-};
-struct List
-{
-    int value;
-    struct List *next;
-};
-struct StackTop // 栈顶，用于维护整个栈
-{
-    int size;  // 栈的大小
-    List *top; // 栈顶指针，用于指栈的顶元素
-};
-ListNode *NewList(int);                    // 为什么要加*呢，因为我要返回一个指针，如果是返回一个结构就完蛋了，因为无法和下一个节点连起来
-ListNode *Access(ListNode *, int);         // 输入头节点和节点序号，返回目标节点
-void Delete(ListNode *);                   // 销毁链表
-void Insert(ListNode *, ListNode *, int);  // 插入第几号之后
-int Find(ListNode *, int);                 // 查找节点值，查到了返回节点序号，没查到返回-1
-void Create(ListNode *[], int[], int len); // 创建一个链表
+> **人生是旷野而非轨道，而大学是人生扬帆起航的港湾**
 
-StackTop *NewStack();         // 新建一个栈
-void DestoyStack(StackTop *); // 销毁一个栈
-int Peek(StackTop *);         // 返回栈顶元素
-void Push(StackTop *, int);   // 入栈
-int Pop(StackTop *);          // 出栈，并返回栈顶元素的值
-int IsEmpty(StackTop *);      // 返回是否空栈，空则返回1，非空则返回0
-int Size(StackTop *);         // 返回栈的元素个数
+萌新刚刚进入工大，迷茫、彷徨而自由。刚刚从高三的压抑中解放出来，大学的空气是自由的，哈尔滨和工大的一切是新鲜的。
 
-int main()
-{
-    StackTop *MyStack = NewStack();
-    ListNode *MyList = NewList(-1); // 链表头节点，啥都不存
-    int tmp, len;
-    printf("请输入要入栈的元素（循环输入）：\n");
-    while (scanf("%d", &tmp) && tmp != EOF && tmp != '\n')
-    {
-        Push(MyStack, tmp);
-    }
-    len = Size(MyStack);
-    for (int i = 1; i <= len; i++)
-    {
-        ListNode *tmp = NewList(Pop(MyStack));
-        Insert(MyList, tmp, i);
-    }
-    printf("现在的链表是：\n");
-    for (int i = 1; i <= len; i++)
-    {
-        printf("%d ", Access(MyList, i)->value);
-    }
-    DestoyStack(MyStack);
-    Delete(MyList);
-    return 0;
-}
-StackTop *NewStack()
-{
-    StackTop *stack;
-    stack = (StackTop *)malloc(sizeof(StackTop));
-    stack->top = NULL;
-    stack->size = 0;
-    return stack;
-}
-void DestoyStack(StackTop *stack)
-{
-    while (stack->top != NULL)
-    {
-        List *list = stack->top->next; // 缓存以下头节点指向节点的下一个
-        free(stack->top);
-        stack->top = list;
-    }
-    free(stack); // 把栈顶也捎带手销毁
-}
-int Peek(StackTop *stack)
-{
-    if (stack->size == 0)
-    { // 特判空栈的情况
-        return __INT_MAX__;
-    }
-    return stack->top->value;
-}
-void Push(StackTop *stack, int val)
-{                                              // 头插法
-    List *node = (List *)malloc(sizeof(List)); // 创建一个新节点用于储存新节点
-    node->value = val;
-    node->next = stack->top;
-    stack->top = node;
-    stack->size++;
-}
-int Pop(StackTop *stack)
-{
-    if (stack->size == 0)
-    { // 空栈则返回INT_MAX表示错误
-        return __INT_MAX__;
-    }
-    List *temp = stack->top;
-    stack->top = stack->top->next;
-    stack->size--;
-    return temp->value;
-}
-int IsEmpty(StackTop *stack)
-{
-    if (stack->size == 0)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-int Size(StackTop *stack)
-{
-    return stack->size;
-}
+我不知道该祝贺你们，还是该替你们感到惋惜。不论高考如何，你们选择了工大，工大也选择了你们。你们拥有了**国内几乎顶级**的食宿环境，也会遇到一群 **爱你们** 的老师。
 
-void Create(ListNode *n[], int val[], int len)
-{
-    for (int i = 0; i < len; i++)
-    {
-        n[i] = NewList(val[i]);
-    }
-    for (int i = 0; i < len - 1; i++)
-    {
-        n[i]->next = n[i + 1];
-    }
-}
-ListNode *NewList(int value)
-{
-    ListNode *node;
-    node = (ListNode *)malloc(sizeof(ListNode)); // 给node一点内存，大小就是一个结构的大小，类型是指针
-    node->value = value;
-    node->next = NULL; // 一定要有，不然无法判定是否到末尾了
-    return node;
-}
-ListNode *Access(ListNode *head, int index)
-{
-    while (head != NULL && head->next != NULL && index > 0)
-    {                      // 头节点不是空的、且下一个节点不是空的、且还没访问到目标节点的序号
-        head = head->next; // 头节点就变成下一个节点了，然后继续循环
-        index--;
-    }
-    return head; // 把头节点返回去就行，因为头节点已经指向了我们要找的节点
-}
-void Insert(ListNode *head, ListNode *target, int index)
-{ // 插入第几号之后
-    while (head != NULL && head->next != NULL && index > 0)
-    {
-        head = head->next;
-        index--;
-    }
-    target->next = head->next; // 先让插入节点指下一个，然后再让前边的节点指插入的，如果不这样子链表会丢掉后面的所有节点
-    head->next = target;
-}
-void Delete(ListNode *head)
-{
-    ListNode *tmp;
-    while (head->next != NULL) // 遍历到下一个，并且free掉刚才的那个节点
-    {
-        tmp = head;
-        head = head->next;
-        free(tmp);
-    }
-    free(head);
-}
-int Find(ListNode *head, int key)
-{
-    int index = 0;
-    while (head != NULL)
-    {
-        if (head->value == key)
-        {
-            return index;
-        }
-        head = head->next;
-        index++;
-    }
-    return -1;
-}
-void Remove(ListNode *head, int index)
-{
-    while (head && head->next && index > 1)
-    {
-        head = head->next;
-        index--;
-    }
-    ListNode *temp = head->next; // 直接将删除节点之前的一个节点指到删除节点之后，就完事了
-    head->next = temp->next;
-    free(temp); // 现在temp指的就是要删除的节点，free了就可以
-}
-```
+当然，作为社会的必修课，你们会遇到许多麻烦。你可能会见到社会的阴暗面，你会看见一些时刻人性的险恶。不过，那不是主旋律，对吧？
+
+工大也不是十全十美的，一些形式主义的作风也弥漫在工大之中。培养方案的混沌，选课永远卡爆的本科生平台，糟糕的通知效率，散漫的班级都是你们需要面临的问题。愿你们读到这本书的时候，不会再对这个地方表示认同。
+
+## 迷茫
+
+萌新会迷茫，面对和高中大相径庭的大学生活，**没有人替你规划**。自由意味着选择，意味着承受对应的**代价**。而在大学，一步错有时候意味着步步错，意味着<font color="red"> **不可能** </font>。
+
+没人会为你解释各种名词、政策，很多萌新大一结束仍然没有理解这些政策，最终酿成遗憾。
+
+没人会为你规划道路，你的人生，完全掌握在你的手中。
+
+工大的黑话很多，对于初来乍到的萌新，确实很难理解。但初来乍到的萌新就要面临大学四年中较为决定性的一年，没有一个清晰的规划和全局了解是万万不行的。
+
+## 挑战
+
+此外，萌新独自一人来到他乡异地，要面临各种问题，对人的能力要求也更加综合。生活中各种琐碎小事需要自己手动管理，生活费需要量入为出，面对各种诱惑，不会有人去劝阻你了。面对陌生的一切，除了见面会仅有的学长（有的地区甚至没有学长），萌新几乎无所依靠。不论是心理方面还是学业方面，萌新都在承受着巨大压力。
+
+## 创作的原因
+
+于是，本书就营运而生了。本书希望在最短的时间内，带萌新了解工大，展望自己的未来人生。
+
+此外，本人受到《上交大生存指南》《cs自学指南》的感召，决定创作这样一个平台，来帮助各位工大学子。
+
+本书希望做一个灯塔，照亮萌新前进的道路。希望提供若干道路，整合工大各种资源和社会资源，成为工大学子的参考平台。
+
+> **从今往后，你是你自己人生的掌舵人。**
+
+2024.1 写于北京

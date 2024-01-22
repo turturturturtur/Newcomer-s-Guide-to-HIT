@@ -1,4 +1,4 @@
-site_name: HIT萌新指南
+site_name: HIT萌新灯塔计划
 theme:
 
   name: material
@@ -7,7 +7,6 @@ theme:
     - header.autohide
     - navigation.tracking
     - navigation.top
-    - navigation.tabs
     - navigation.selections
     - search.highlight
     - search.share
