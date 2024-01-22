@@ -1,0 +1,59 @@
+site_name: HIT萌新指南
+theme:
+
+  name: material
+
+  features:
+    - header.autohide
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.selections
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.annotate
+    - toc.integrate
+    - content.tabs.link
+    - content.code.annoation
+    - content.code.copy
+
+  language: zh
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/turturturturtur/Newcomer-s-Guide-to-HIT
+
+copyright:
+  Copyright &copy; 2023 <a href="https://github.com/turturturturtur" target="_blank" rel="noopener">YellowPeach</a>
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.mark
