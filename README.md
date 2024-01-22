@@ -1,4 +1,4 @@
-# HIT-萌新入门指南
+# HIT-萌新灯塔计划
 
 ![GitHub License](https://img.shields.io/github/license/turturturturtur/Newcomer-s-Guide-to-HIT)
 [![GitHub issues](https://img.shields.io/github/issues/turturturturtur/Newcomer-s-Guide-to-HIT?color=blue)
