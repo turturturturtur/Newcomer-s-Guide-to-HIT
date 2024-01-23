@@ -11,9 +11,8 @@ copyright:
 
 
 theme:
-
   name: material
-
+  custom_dir: overrides  #主要是这一行
   features:
     - header.autohide
     - navigation.tracking
@@ -45,7 +44,8 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-    
+
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -71,10 +71,4 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
-
-font:
-  text: Roboto Slab
-  code: Roboto Mono
-icon:
-  repo: fontawesome/brands/github
 
