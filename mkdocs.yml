@@ -1,4 +1,15 @@
 site_name: HIT萌新灯塔计划
+site_author: YellowPeach
+site_description: >-
+  萌新灯塔
+
+repo_name: Newcomer-s-Guide-to-HIT
+repo_url: https://github.com/turturturturtur/Newcomer-s-Guide-to-HIT
+
+copyright:
+  Copyright &copy; 2023 <a href="https://github.com/turturturturtur" target="_blank" rel="noopener">YellowPeach</a>
+
+
 theme:
 
   name: material
@@ -39,9 +50,9 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/turturturturtur/Newcomer-s-Guide-to-HIT
-
-copyright:
-  Copyright &copy; 2023 <a href="https://github.com/turturturturtur" target="_blank" rel="noopener">YellowPeach</a>
+  analytics:
+    provider: google
+    property: G-KJB4RXSKZG
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -57,3 +68,13 @@ markdown_extensions:
   - footnotes
   - pymdownx.superfences
   - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - footnotes
+
+font:
+  text: Roboto Slab
+  code: Roboto Mono
+icon:
+  repo: fontawesome/brands/github
+
