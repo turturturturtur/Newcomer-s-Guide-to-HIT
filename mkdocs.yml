@@ -13,6 +13,7 @@ copyright:
 theme:
   name: material
   custom_dir: overrides  #主要是这一行
+#  logo: static/images/title.png
   features:
     - header.autohide
     - navigation.tracking
@@ -22,13 +23,11 @@ theme:
     - search.share
     - search.suggest
     - content.code.annotate
-    - toc.integrate
     - content.tabs.link
     - content.code.annoation
     - content.code.copy
-
+    - toc.follow
   language: zh
-
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -44,6 +43,10 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+
+plugins:
+  - minify:
+      minify_html: true
 
 
 extra:
