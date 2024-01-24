@@ -10,11 +10,10 @@ comments: true
 
 (如果你有其他好的建议，或者想加入贡献者的行列，欢迎邮件联系 2023110605@stu.hit.edu.cn 或者在 issue 里提问)
 
-
+* <font color="purple">**工大电子办公系统介绍** </font>
 * <font color="purple">**学业方面** </font>
-* <font color="purple">**[占位符]** </font>
-* <font color="purple">**[占位符]** </font>
-* <font color="purple">**[占位符]** </font>
+* <font color="purple">**升学方面** </font>
+* <font color="purple">**政策方面** </font>
 
 
 > **人生是旷野而非轨道，而大学是人生扬帆起航的港湾**
