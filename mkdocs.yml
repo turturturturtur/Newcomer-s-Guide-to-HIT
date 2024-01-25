@@ -44,10 +44,6 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
-plugins:
-  - minify:
-      minify_html: true
-
 
 extra:
   social:
