@@ -3,7 +3,7 @@
 ![GitHub License](https://img.shields.io/github/license/turturturturtur/Newcomer-s-Guide-to-HIT)
 [![GitHub issues](https://img.shields.io/github/issues/turturturturtur/Newcomer-s-Guide-to-HIT?color=blue)
 ](https://github.com/turturturturtur/Newcomer-s-Guide-to-HIT/issues)
-[![Stars](https://img.shields.io/github/stars/PKUFlyingPig/cs-self-learning)](https://img.shields.io/github/stars/turturturturtur/Newcomer-s-Guide-to-HIT?label=Stars)
+[![Stars](https://img.shields.io/github/stars/turturturturtur/Newcomer-s-Guide-to-HIT?label=Stars)](https://img.shields.io/github/stars/turturturturtur/Newcomer-s-Guide-to-HIT?label=Stars)
 
 本人受到《上交大生存指南》《cs自学指南》的感召，决定创作这样一个平台，来帮助各位工大学子。
 
