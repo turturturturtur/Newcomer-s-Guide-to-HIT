@@ -43,3 +43,8 @@ Hello算法由krahets书写，是一本开源免费、新手友好的数据结�
 
 
 
+限于Giscuss的设置，本人提供一个供大家匿名评论的github账号
+
+**账号：hitcomentrobot@gmail.com**
+
+**密码：hitcomentrobot123456**

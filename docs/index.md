@@ -60,9 +60,11 @@ comments: true
 
 
 
+***
+
 限于Giscuss的设置，本人提供一个供大家匿名评论的github账号
 
-账号：hitcomentrobot@gmail.com
+**账号：hitcomentrobot@gmail.com**
 
-密码：hitcomentrobot123456
+**密码：hitcomentrobot123456**
 
