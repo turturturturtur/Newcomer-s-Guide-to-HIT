@@ -42,7 +42,6 @@ cs自学指南涵盖 C/C++/Java/JS/Python/Go/Rust 等主流语言，算法、电
 Hello算法由krahets书写，是一本开源免费、新手友好的数据结构与算法入门教程。交互和图解是它的特点，这有助于萌新迅速上手，更快的理解数据结构和算法的核心思想。
 
 
-
 限于Giscuss的设置，本人提供一个供大家匿名评论的github账号
 
 **账号：hitcomentrobot@gmail.com**
