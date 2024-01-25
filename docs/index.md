@@ -13,6 +13,7 @@ comments: true
 
 * <font color="purple">**工大电子办公系统介绍** </font>
 * <font color="purple">**学业方面** </font>
+* <font color="purple">**竞赛方面** </font>
 * <font color="purple">**升学方面** </font>
 * <font color="purple">**政策方面** </font>
 
@@ -59,6 +60,12 @@ comments: true
 **<p align="right">2024.1 写于北京</p>**
 
 
+
+***
+
+❤️❤️❤️目前计划涵盖的方面不算完善，希望未来大家可以积极贡献信息。不论是什么信息，都可以积极发到邮箱里，或者在评论区留言，都可以的。我会汇总这些信息，然后慢慢添加、补全这个计划。
+
+❤️❤️❤️如果您发现行为行文中有错别字、病句的话，烦请在评论区指正，或者邮件、QQ联系，感谢各位对本计划的支持。
 
 ***
 
