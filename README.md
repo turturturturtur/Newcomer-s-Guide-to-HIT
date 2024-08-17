@@ -26,5 +26,7 @@
 [Zephyr#3](https://github.com/ZephyrVictor/InfoMathExp)
 
 ## ✨ 鸣谢
+
 **Zephyr#3**
+
 **Cherrling**
