@@ -21,7 +21,7 @@
 
 ## 联动仓库
 
-[HIT-OpenCS](https://github.com/Cherrling/HIT-OpenCS)
+[HIT-OpenCS](https://github.com/HIT-OpenCS/HIT-OpenCS)
 
 [Zephyr#3](https://github.com/ZephyrVictor/InfoMathExp)
 
